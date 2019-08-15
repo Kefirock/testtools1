@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="testtools1",
-    version="1.0.1",
+    version="1.0.2",
     author="TakeWing",
     author_email="n.ostroukhov@takewing.ru",
     description="EthTools framework",
