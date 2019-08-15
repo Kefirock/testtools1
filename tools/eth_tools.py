@@ -13,8 +13,8 @@ from .eth_properties import Filtered, Preloaded
 w3 = Web3(HTTPProvider("http://localhost:8545/"))
 
 class EthResolver:
-    def __init__(self, eth_utils):
-        self.eth = eth_utils
+    def __init__(self, eth_tools):
+        self.eth = eth_tools
 
     def resolve_account_name(self, name):
         return self.eth.filter(role=name).accounts[0].address
@@ -56,7 +56,7 @@ class EthResolver:
 
         return resolved
 
-class EthUtils(Filtered, Preloaded):
+class EthTools(Filtered, Preloaded):
     def __init__(self, server_address):
         self.server_address = server_address
         self.scope = str(uuid4())
